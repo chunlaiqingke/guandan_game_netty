@@ -48,8 +48,8 @@ public class GameServer {
         server.addDisconnectListener(new DisconnectListener() {
             @Override
             public void onDisconnect(SocketIOClient client) {
-//                System.out.println("client disconnected: " + client.getSessionId().toString());
-//                GameManager.removePlayer(client.getSessionId().toString());
+                System.out.println("client disconnected: " + client.getSessionId().toString());
+                GameManager.removePlayer(client.getSessionId().toString());
             }
         });
 
